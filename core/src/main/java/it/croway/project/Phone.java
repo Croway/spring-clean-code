@@ -1,9 +1,19 @@
 package it.croway.project;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Phone {
 
-	private User user;
+	@Id
 	private String number;
+	@ManyToOne
+	private User user;
+	@Enumerated(EnumType.STRING)
 	private PhoneType type;
 	
 	public Phone() {

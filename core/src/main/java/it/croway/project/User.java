@@ -2,11 +2,18 @@ package it.croway.project;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
 public class User {
 
+	@Id
 	private String username;
 	private String name;
 	private String surname;
+	@OneToMany(mappedBy = "user")
 	private List<Phone> phones;
 	
 	public User() {

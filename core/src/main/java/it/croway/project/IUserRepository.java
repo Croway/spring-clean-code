@@ -8,7 +8,7 @@ public interface IUserRepository {
 	public Optional<User> findByName(String name);
 	public Collection<User> findAll();
 	public Optional<User> findById(String id);
-	public User insert(User t);
-	public void update(User t);
+	public User save(User t);
+	public void updateName(String user, String newName);
 	
 }
