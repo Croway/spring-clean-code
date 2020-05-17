@@ -3,6 +3,7 @@ package it.croway.adapter;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -10,10 +11,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import it.croway.project.UserService;
 
 @SpringBootApplication
-public class SpringApplication {
+public class SpringApplicationAdapter {
 
 	public static void main(String[] args) {
-		org.springframework.boot.SpringApplication.run(SpringApplication.class, args);
+		SpringApplication.run(SpringApplicationAdapter.class, args);
 	}
 	
 	@Autowired

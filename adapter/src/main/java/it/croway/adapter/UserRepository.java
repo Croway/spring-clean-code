@@ -50,13 +50,13 @@ public class UserRepository implements IUserRepository {
 	}
 
 	@Override
-	public User insert(User t) {
+	public User save(User t) {
 		jdbcTemplate.update("INSERT INTO User VALUES (?, ?, ?)", t.getUsername(), t.getName(), t.getSurname());
 		return t;
 	}
 
 	@Override
-	public void update(User t) {
+	public void updateName(String user, String name) {
 		// TODO Auto-generated method stub
 
 	}
